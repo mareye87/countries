@@ -10,18 +10,21 @@ const CountryCard = ({ flags, name, population, capital, region }) => {
       onClick={() => {
         getPosition();
       }}
-      className=" flex flex-col justify-between rounded-lg overflow-hidden shadow-lg hover:scale-105 hover:shadow-xl transition duration-300 bg-slate-50 text-slate-800 dark:bg-slate-700 dark:text-slate-50 "
+      className=" rounded-lg overflow-hidden shadow-lg hover:scale-105 hover:shadow-xl transition duration-300 bg-slate-50 text-slate-800 dark:bg-slate-700 dark:text-slate-50 "
     >
-      <Link to={`name/${name.official}?fullText=true`}>
+      <Link
+        to={`name/${name.official}?fullText=true`}
+        className="flex flex-col justify-between"
+      >
         <div>
           <img
             src={flags.svg}
-            alt={flags.alt}
+            alt={flags.alt || "flag image"}
             className="w-full object-cover shadow-lg "
           />
         </div>
-        <div className="flex flex-col gap-y-2 p-6">
-          <h1 className="font-semibold text-lg">{name.common}</h1>
+        <div className="flex flex-col gap-y-1 p-6 ">
+          <h4 className="font-semibold text-lg">{name.common}</h4>
           <h5 className="font-semibold">
             Population:
             <span className="ml-1 font-normal">

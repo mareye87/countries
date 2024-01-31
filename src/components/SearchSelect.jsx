@@ -17,7 +17,7 @@ const SearchSelect = () => {
         id="region"
         className=" uppercase px-4 bg-slate-50 text-slate-800 dark:bg-slate-700 dark:text-slate-100 "
       >
-        <option value="">Filter by region</option>
+        <option value="all">Filter by region</option>
         {regions.map((region) => {
           return (
             <option

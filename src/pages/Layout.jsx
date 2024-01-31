@@ -11,7 +11,7 @@ const Layout = () => {
       {loading.state === "loading" ? (
         <GlobalLoading />
       ) : (
-        <section className="max-w-6xl pt-32 mx-auto p-4  ">
+        <section className="max-w-7xl pt-32 mx-auto p-4  ">
           <Outlet />
         </section>
       )}
